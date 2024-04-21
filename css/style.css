@@ -1,3 +1,104 @@
-.fatto {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* common */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+
+
+/* header del sito */
+.website-header {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #EDF2F7;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px lightgrey;
+}
+
+
+/* contenitore sezione add task */
+.container {
+    width: 60%;
+    background-color: #EDF2F7;
+    margin: 60px auto 10px;
+    margin-top: 20px;
+
+}
+
+
+/* parte superiore */
+.top {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.top input,
+.top button {
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: #fff;
+}
+
+.top button {
+    background-color: #14AAF5;
+    color: white;
+}
+
+/* lista */
+.list {
+    padding: 40px;
+}
+
+.main-list h3 {
+    text-transform: uppercase;
+}
+
+.main-list>li {
+    margin-bottom: 15px;
+}
+
+.inner-list>li {
+    background-color: white;
+    padding: 10px;
+}
+
+.circle {
+     display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid black;
+} 
+
+.check {
+    color: green;
+    border-color: green;
+}
+
+.cross {
+    color: red;
+    border-color: red;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+.check {
     text-decoration: line-through;
+       color: green; }
+.cross {
+    color: red; 
 }

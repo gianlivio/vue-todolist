@@ -8,13 +8,45 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">
-        <ul>
-            <li v-for="todo in todos" :class="{ 'fatto': todo.fatto }" >
-                {{ todo.text }}
-            </li>
-        </ul>
-    </div>
+    <!-- header -->
+    <header class="website-header">
+        <img src="./img/logo.png" alt="website logo">
+        <span>Toboolist</span>
+    </header>
+    <!-- /header -->
+
+
+    <!-- main -->
+    <main>
+        <div class="container">
+            <!-- add task area -->
+
+
+            <div id="app">
+                <div class="top">
+                    <input type="text" v-model="newTaskText" placeholder="Da completare...">
+                    <button @click="addTask">Add Task</button>
+                </div>
+            
+                <div class="list">
+                    <ul class="main-list">
+                        <li v-for="(task, category) in categorizedTasks" :key="category">
+                            <h3>&#10148; {{ category }}</h3>
+                            <ul class="inner-list">
+                                <li v-for="todo in task" :key="todo.text">
+                                    <!-- Applica la classe direttamente al testo del task -->
+                                    <span :class="[todo.done ? 'check' : 'cross']">{{ todo.text }}</span>
+                                    
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /lista annidata -->
+    </main>
+    <!-- /main -->
     <script src="./js/script.js"></script>
 </body>
 </html>
