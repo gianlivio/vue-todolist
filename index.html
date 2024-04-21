@@ -24,8 +24,9 @@
 
             <div id="app">
                 <div class="top">
-                    <input type="text" v-model="newTaskText" placeholder="Da completare...">
-                    <button @click="addTask">Add Task</button>
+                    <input type="text" v-model="newTodoText" placeholder="Aggiungi un nuovo compito..."
+                           @keyup.enter="addTask">
+                    <button @click="addTask">Aggiungi</button>
                 </div>
             
                 <div class="list">
@@ -34,7 +35,6 @@
                             <h3>&#10148; {{ category }}</h3>
                             <ul class="inner-list">
                                 <li v-for="todo in task" :key="todo.text">
-                                    <!-- Applica la classe direttamente al testo del task -->
                                     <span :class="[todo.done ? 'check' : 'cross']">{{ todo.text }}</span>
                                     
                                 </li>

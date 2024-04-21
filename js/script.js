@@ -34,9 +34,13 @@ createApp({
     },
     methods: {
         addTask() {
-            if (this.newTaskText) {
-                this.todos.push({ text: this.newTaskText, done: false, category: "General" });
-                this.newTaskText = '';
+            if (this.newTodoText.trim()) {
+                this.todos.push({
+                    text: this.newTodoText,
+                    done: false,
+                    category: "General"
+                });
+                this.newTodoText = '';
             }
         }
     }
