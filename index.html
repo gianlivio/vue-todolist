@@ -35,7 +35,9 @@
                             <h3>&#10148; {{ category }}</h3>
                             <ul class="inner-list">
                                 <li v-for="todo in task" :key="todo.text">
-                                    <span :class="[todo.done ? 'check' : 'cross']">{{ todo.text }}</span>
+                                    <span :class="['circle', todo.done ? 'check' : 'cross']"
+                                          @click="toggleDone(todo)">&check;</span>
+                                    <span @click="toggleDone(todo)">{{ todo.text }}</span>
                                     
                                 </li>
                             </ul>

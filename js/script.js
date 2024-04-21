@@ -42,6 +42,11 @@ createApp({
                 });
                 this.newTodoText = '';
             }
+        },
+        toggleDone(todo) {
+            todo.done = !todo.done;  
         }
-    }
+        
+    },
+    
 }).mount('#app');
