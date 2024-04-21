@@ -45,8 +45,13 @@ createApp({
         },
         toggleDone(todo) {
             todo.done = !todo.done;  
+        },
+        removeTask(todo) {
+            const index = this.todos.findIndex(t => t === todo);
+            if (index > -1) {
+                this.todos.splice(index, 1);
+            }
         }
-        
     },
     
 }).mount('#app');

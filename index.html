@@ -38,12 +38,13 @@
                                     <span :class="['circle', todo.done ? 'check' : 'cross']"
                                           @click="toggleDone(todo)">&check;</span>
                                     <span @click="toggleDone(todo)">{{ todo.text }}</span>
-                                    
+                                    <span class="delete" @click="removeTask(todo)">x</span>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
+              
             </div>
         </div>
         <!-- /lista annidata -->
